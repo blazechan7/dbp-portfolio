@@ -1,1 +1,2 @@
-/   /html/home/index.html   301
+# Force redirect: root index.html would otherwise shadow this rule
+/   /html/home/index.html   301!
