@@ -1,0 +1,46 @@
+/* home-cta.css - portfolio partial */
+/* ========== Home CTA row ========== */
+.home-cta-row {
+    padding: 0;
+    border-top: none;
+}
+
+.home-cta-row__inner {
+    max-width: var(--prose-max);
+}
+
+.home-cta-row__kicker {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-sm);
+}
+
+.home-cta-row__text {
+    color: var(--text-muted);
+    line-height: 1.78;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.0625rem;
+}
+
+.home-cta-row__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.home-cta-row__links a {
+    font-weight: 500;
+    padding: 0.5rem 1.1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--bg);
+    font-size: 0.9375rem;
+}
+
+.home-cta-row__links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}

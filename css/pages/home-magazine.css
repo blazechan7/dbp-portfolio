@@ -1,0 +1,530 @@
+/* home-magazine.css - portfolio partial */
+/* ========== Homepage: light magazine cover + portfolio ========== */
+body.page-home .main--home {
+    position: relative;
+    z-index: 2;
+}
+
+.hero--cover {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100svh - 64px);
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+}
+
+.magazine-cover {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background:
+        linear-gradient(168deg, #ffffff 0%, #f5f9fc 38%, #eaf2f9 72%, #e2ecf6 100%);
+    border-bottom: 1px solid rgba(15, 107, 171, 0.14);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 20px 50px rgba(15, 23, 42, 0.07);
+}
+
+.magazine-cover__noise {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+}
+
+.magazine-cover__glow {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(90px);
+}
+
+.magazine-cover__glow--1 {
+    width: min(58vw, 520px);
+    height: min(42vh, 380px);
+    top: -18%;
+    right: -12%;
+    background: rgba(56, 189, 248, 0.28);
+}
+
+.magazine-cover__glow--2 {
+    width: min(45vw, 400px);
+    height: min(38vh, 320px);
+    bottom: 5%;
+    left: -18%;
+    background: rgba(15, 107, 171, 0.18);
+}
+
+.magazine-cover__inner {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: calc(64px + 0.35rem);
+    padding-bottom: clamp(0.65rem, 2vh, 1.25rem);
+}
+
+.magazine-cover__masthead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.magazine-cover__vol {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+}
+
+.magazine-cover__body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 32%);
+    gap: clamp(1rem, 4vw, 2.75rem);
+    align-items: center;
+    padding: clamp(0.5rem, 2.5vh, 2rem) 0;
+    min-height: 0;
+}
+
+.magazine-cover__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+.magazine-cover__title-line {
+    display: block;
+}
+
+.magazine-cover__title-line--mega {
+    font-size: clamp(3rem, 13vw, 7.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.038em;
+    color: var(--text);
+    text-shadow: 0 2px 0 rgba(255, 255, 255, 0.8);
+}
+
+.magazine-cover__title-line--sub {
+    margin-top: 0.1em;
+    font-size: clamp(1.05rem, 3.2vw, 2rem);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+}
+
+.magazine-cover__deck {
+    margin-top: 1.15rem;
+    margin-bottom: 1.45rem;
+    max-width: 34rem;
+    font-size: clamp(0.9rem, 1.45vw, 1.05rem);
+    line-height: 1.65;
+    color: #334155;
+}
+
+.magazine-cover__actions.hero__actions {
+    margin-bottom: 1.35rem;
+}
+
+.magazine-cover__visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    justify-self: end;
+    width: 100%;
+}
+
+.magazine-cover__stamp {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 0.65rem;
+    padding: 0.45rem 0.3rem;
+    font-size: 0.5625rem;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(15, 23, 42, 0.38);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 1px;
+}
+
+.magazine-cover__media.hero__photo {
+    position: relative;
+    max-width: min(300px, 100%);
+    width: 100%;
+    margin-left: 0;
+    aspect-ratio: 3 / 5;
+    overflow: hidden;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border-strong);
+    background-color: #e2e8f0;
+    background-image: none;
+    box-shadow:
+        0 2px 0 rgba(15, 107, 171, 0.15),
+        0 16px 40px rgba(15, 23, 42, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.magazine-cover__video {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 32%;
+    transform: scale(1.04);
+    transform-origin: center 32%;
+}
+
+.magazine-cover__media.hero__photo::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    inset: -8px;
+    border-radius: calc(var(--radius-card) + 2px);
+    background: linear-gradient(135deg, rgba(15, 107, 171, 0.12) 0%, transparent 55%);
+}
+
+.magazine-cover__rail {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.magazine-cover__rail a {
+    color: var(--text);
+    transition: color var(--transition-fast);
+}
+
+.magazine-cover__rail a:hover {
+    color: var(--accent);
+}
+
+.magazine-cover__rail-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(15, 107, 171, 0.35);
+}
+
+body.page-home .hero__cta {
+    box-shadow: 0 4px 16px rgba(15, 107, 171, 0.2);
+}
+
+body.page-home .hero__cta:hover {
+    box-shadow: 0 6px 22px rgba(15, 107, 171, 0.26);
+}
+
+body.page-home .home-preview {
+    border-top: 1px solid rgba(15, 107, 171, 0.08);
+}
+
+body.page-home .home-preview__header {
+    border-bottom-color: rgba(15, 107, 171, 0.12);
+}
+
+body.page-home .home-preview__title {
+    font-size: clamp(2rem, 3.8vw, 2.65rem);
+    position: relative;
+}
+
+body.page-home .home-preview__title::before {
+    content: '';
+    position: absolute;
+    left: -0.65rem;
+    top: 0.15em;
+    bottom: 0.15em;
+    width: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+    opacity: 0.9;
+}
+
+body.page-home .home-preview__link {
+    font-weight: 600;
+    padding: 0.45rem 0.85rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(15, 107, 171, 0.22);
+    background: rgba(255, 255, 255, 0.85);
+    transition:
+        background var(--transition-base),
+        border-color var(--transition-base),
+        color var(--transition-fast);
+}
+
+body.page-home .home-preview__link:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+}
+
+body.page-home .home-preview .project-card {
+    border-color: rgba(20, 20, 20, 0.08);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+body.page-home .home-preview .project-card:hover {
+    border-color: rgba(15, 107, 171, 0.45);
+    box-shadow:
+        0 12px 32px rgba(20, 20, 20, 0.1),
+        0 0 0 1px rgba(15, 107, 171, 0.08);
+}
+
+body.page-home .home-preview__interlude {
+    margin: 0 0 var(--spacing-xl);
+    max-width: 38rem;
+    padding: 0.35rem 0 0.35rem 1.15rem;
+    border-left: 3px solid rgba(15, 107, 171, 0.42);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+}
+
+body.page-home .home-preview__interlude-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.45rem;
+}
+
+body.page-home .home-preview__grid--rhythm .project-card:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+body.page-home .home-preview__grid--rhythm .project-card:nth-child(2),
+body.page-home .home-preview__grid--rhythm .project-card:nth-child(3) {
+    grid-column: span 6;
+}
+
+body.page-home .home-preview__grid--rhythm .project-card--home-lead {
+    flex-direction: column;
+}
+
+@media (min-width: 769px) {
+    body.page-home .home-preview__grid--rhythm .project-card--home-lead {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    body.page-home .home-preview__grid--rhythm .project-card--home-lead .project-card__image-wrapper {
+        flex: 1.2 1 45%;
+        max-width: 54%;
+        min-width: 0;
+        aspect-ratio: 16 / 10;
+    }
+
+    body.page-home .home-preview__grid--rhythm .project-card--home-lead .project-card__content {
+        flex: 1 1 0;
+        justify-content: center;
+        padding: var(--spacing-lg) var(--spacing-xl);
+        min-width: 0;
+    }
+
+    body.page-home .home-preview__grid--rhythm .project-card--home-lead .project-card__title {
+        font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    }
+}
+
+/* Beyond the cover + shared “magazine band” blocks (playground Currently into): hero stack + embedded grid-scan (see script.js) */
+body.page-home .magazine-cover--band,
+body.page-playground .magazine-cover--band {
+    overflow: hidden;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 12px 40px rgba(15, 23, 42, 0.06);
+    border-top: 1px solid rgba(15, 107, 171, 0.1);
+    border-bottom: 1px solid rgba(15, 107, 171, 0.14);
+}
+
+body.page-home .magazine-cover--band .magazine-cover__glow--1,
+body.page-playground .magazine-cover--band .magazine-cover__glow--1 {
+    width: min(30vw, 240px);
+    height: min(26vh, 200px);
+    top: 18%;
+    right: -6%;
+    filter: blur(72px);
+}
+
+body.page-home .magazine-cover--band .magazine-cover__glow--2,
+body.page-playground .magazine-cover--band .magazine-cover__glow--2 {
+    bottom: -25%;
+    left: -14%;
+}
+
+body.page-home .magazine-cover__inner--band,
+body.page-playground .magazine-cover__inner--band {
+    flex: none;
+    min-height: 0;
+    padding-top: var(--section-y-loose);
+    padding-bottom: var(--section-y-loose);
+}
+
+body.page-home .home-cta-row,
+body.page-playground .playground-current-row {
+    margin: 0;
+}
+
+/* No body-gradient gap above footer: band meets dark chrome directly */
+body.page-home .footer,
+body.page-playground .footer {
+    margin-top: 0;
+}
+
+body.page-home .home-cta-row__links a,
+body.page-playground .home-cta-row__links a {
+    background: var(--surface);
+    border-color: rgba(15, 107, 171, 0.2);
+    font-weight: 600;
+}
+
+body.page-home .home-cta-row__links a:hover,
+body.page-playground .home-cta-row__links a:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+}
+
+body.page-home .home-cta-row__split,
+body.page-playground .home-cta-row__split {
+    display: grid;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+body.page-home .home-cta-row__split .home-cta-row__inner,
+body.page-playground .home-cta-row__split .home-cta-row__inner {
+    max-width: none;
+}
+
+body.page-home .home-cta-row__pull,
+body.page-playground .home-cta-row__pull {
+    font-family: var(--font-display);
+    font-size: clamp(1.55rem, 3vw, 2.25rem);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    line-height: 1.22;
+    color: rgba(15, 23, 42, 0.9);
+    margin: 0;
+    max-width: 15ch;
+}
+
+@media (min-width: 769px) {
+    body.page-home .home-cta-row__split,
+    body.page-playground .home-cta-row__split {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+        gap: clamp(1.5rem, 5vw, 3.5rem);
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .magazine-cover__body {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.35rem 0 0.65rem;
+    }
+
+    .magazine-cover__visual {
+        order: -1;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+
+    .magazine-cover__stamp {
+        writing-mode: horizontal-tb;
+        transform: none;
+        margin-bottom: 0;
+        align-self: flex-start;
+    }
+
+    .magazine-cover__media.hero__photo {
+        max-width: min(45%, 300px);
+        min-width: 140px;
+    }
+}
+
+@media (max-height: 700px) {
+    .magazine-cover__title-line--mega {
+        font-size: clamp(2.4rem, 10vw, 4.5rem);
+    }
+
+    .magazine-cover__title-line--sub {
+        font-size: clamp(0.95rem, 2.8vw, 1.35rem);
+    }
+
+    .magazine-cover__deck {
+        margin-top: 0.65rem;
+        margin-bottom: 0.85rem;
+        font-size: 0.875rem;
+    }
+
+    .hero__status-wrap {
+        margin-top: 0.65rem;
+    }
+
+    .magazine-cover__inner {
+        padding-top: calc(64px + 0.35rem);
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .magazine-cover__video {
+        display: none;
+    }
+
+    .magazine-cover__media.hero__photo {
+        background-image: url('../../images/mee.jpeg');
+        background-size: 104%;
+        background-position: center 32%;
+    }
+
+    body.page-home .hero__cta,
+    body.page-home .hero__cta:hover,
+    body.page-home .home-preview .project-card:hover {
+        box-shadow: var(--shadow-sm);
+    }
+}

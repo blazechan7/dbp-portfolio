@@ -1,0 +1,53 @@
+/* buttons.css - portfolio partial */
+/* ========== Buttons / CTAs ========== */
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.65rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: var(--on-accent);
+    transition:
+        background var(--transition-base),
+        border-color var(--transition-base),
+        color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+button.hero__cta {
+    appearance: none;
+}
+
+.hero__cta:hover {
+    background: var(--link-hover);
+    border-color: var(--link-hover);
+    color: var(--on-accent);
+}
+
+.hero__cta--secondary {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.hero__cta--secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--surface);
+}
+
+.resume-actions {
+    margin-top: var(--spacing-md);
+}
+
+.resume-actions .hero__cta {
+    margin-right: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}

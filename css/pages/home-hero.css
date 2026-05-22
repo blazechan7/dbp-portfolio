@@ -1,0 +1,111 @@
+/* home-hero.css - portfolio partial */
+/* Shared hero utilities (magazine cover on home uses these + home-magazine.css) */
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.hero__aside {
+    justify-self: end;
+    width: 100%;
+}
+
+.hero__photo {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    border-radius: var(--radius-card);
+    background-color: #e8e8e5;
+    background-image: var(--placeholder-photo);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+}
+
+.hero__status-wrap {
+    margin-top: clamp(0.85rem, 2.2vw, 1.35rem);
+}
+
+/* Homepage: inline availability (dot + text, no card) */
+.hero-availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.hero-availability__indicator {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.125rem;
+    height: 1.125rem;
+    flex-shrink: 0;
+}
+
+.hero-availability__dot {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--text-muted);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.hero-availability--open .hero-availability__dot {
+    background: #16a34a;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.95),
+        0 0 0 3px rgba(22, 163, 74, 0.25);
+}
+
+.hero-availability--open .hero-availability__indicator::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: rgba(22, 163, 74, 0.35);
+    animation: hero-availability-pulse 2s ease-out infinite;
+}
+
+.hero-availability--open .hero-availability__text {
+    color: var(--text);
+}
+
+.hero-availability--closed .hero-availability__dot {
+    background: #94a3b8;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+@keyframes hero-availability-pulse {
+    0% {
+        transform: scale(0.65);
+        opacity: 0.55;
+    }
+
+    100% {
+        transform: scale(1.65);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-availability--open .hero-availability__indicator::before {
+        animation: none;
+    }
+}

@@ -1,0 +1,73 @@
+/* header.css - portfolio partial */
+/* ========== Header ========== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(180deg, var(--color-chrome-nav-bg-mid) 0%, var(--color-chrome-nav-bg) 100%);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-chrome-nav-border);
+    transition: box-shadow var(--transition-base);
+}
+
+.header--scrolled {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.22);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    gap: var(--spacing-md);
+}
+
+.nav__logo-link {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--color-chrome-nav-text);
+}
+
+.nav__logo-kicker {
+    font-style: italic;
+}
+
+.nav__logo-link:hover {
+    color: var(--color-highlight-on-dark-alt);
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    list-style: none;
+}
+
+.nav__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-chrome-nav-muted);
+}
+
+.nav__link:hover,
+.nav__link--active {
+    color: var(--color-chrome-nav-text);
+}
+
+.nav__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav__toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-chrome-nav-text);
+}

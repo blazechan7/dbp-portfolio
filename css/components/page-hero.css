@@ -1,0 +1,68 @@
+/* page-hero.css - portfolio partial */
+/* ========== Page hero (inner pages) ========== */
+.page-hero {
+    padding: calc(64px + 0.35rem) 0 var(--section-y-loose);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.page-hero__masthead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding-bottom: 0.85rem;
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.page-hero__vol {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+}
+
+.page-hero__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2.35rem, 5.2vw, 3.45rem);
+    font-weight: 600;
+    line-height: 1.08;
+    margin-bottom: var(--spacing-md);
+    max-width: 20ch;
+    letter-spacing: -0.025em;
+}
+
+.page-hero__lead {
+    font-size: 1.0625rem;
+    color: var(--text-muted);
+    max-width: var(--prose-max);
+    line-height: 1.72;
+}
+
+.page-hero__lead a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.page-hero__lead a:hover {
+    color: var(--link-hover);
+}

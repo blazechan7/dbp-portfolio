@@ -1,0 +1,54 @@
+/* typography.css - portfolio partial */
+/* ========== Typography ========== */
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.85rem, 3.6vw, 2.65rem);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+}
+
+main strong {
+    font-weight: 600;
+    color: var(--text);
+}
+
+main em {
+    font-style: italic;
+}
+
+.hl {
+    background: linear-gradient(180deg, transparent 60%, rgba(240, 220, 140, 0.55) 60%, rgba(240, 220, 140, 0.55) 95%, transparent 95%);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    font-weight: 500;
+    color: var(--text);
+}
+
+/* Warm marker — same ink as default .hl; use for explicit pairing with other modifiers */
+.hl.hl--sun {
+    background: linear-gradient(180deg, transparent 60%, rgba(245, 210, 120, 0.58) 60%, rgba(245, 210, 120, 0.58) 95%, transparent 95%);
+    font-weight: 600;
+}
+
+.hl.hl--rose {
+    background: linear-gradient(180deg, transparent 58%, rgba(232, 150, 155, 0.42) 58%, rgba(232, 150, 155, 0.42) 93%, transparent 93%);
+    font-weight: 600;
+}
+
+.hl.hl--mint {
+    background: linear-gradient(180deg, transparent 58%, rgba(110, 200, 185, 0.35) 58%, rgba(110, 200, 185, 0.35) 93%, transparent 93%);
+    font-weight: 600;
+}
+
+.hl.hl--lavender {
+    background: linear-gradient(180deg, transparent 58%, rgba(186, 170, 235, 0.45) 58%, rgba(186, 170, 235, 0.45) 93%, transparent 93%);
+    font-weight: 600;
+}
+
+.hl.hl--sand {
+    background: linear-gradient(180deg, transparent 58%, rgba(214, 190, 145, 0.45) 58%, rgba(214, 190, 145, 0.45) 93%, transparent 93%);
+    font-weight: 600;
+}

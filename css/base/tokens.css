@@ -1,0 +1,46 @@
+/* tokens.css - portfolio partial */
+:root {
+    color-scheme: light;
+    --bg: #edf2f7;
+    --surface: #ffffff;
+    --text: #0f172a;
+    --text-muted: #5c6b7a;
+    --border: #cbd5e1;
+    --border-strong: #94a3b8;
+    --accent: #0f6bab;
+    --accent-soft: rgba(15, 107, 171, 0.14);
+    --on-accent: #f8fafc;
+    --link-hover: #0a5588;
+
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1.125rem;
+    --spacing-md: 1.75rem;
+    --spacing-lg: 3.5rem;
+    --spacing-xl: 5.25rem;
+    --section-y-loose: clamp(4rem, 9vw, 6.75rem);
+    --prose-max: 42rem;
+    --container-max-width: 1160px;
+    --container-padding: clamp(1.25rem, 4vw, 2rem);
+    --grid-gap: 2rem;
+    --radius-sm: 4px;
+    --radius-card: 6px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-md-hover: 0 8px 28px rgba(0, 0, 0, 0.1);
+    --shadow-inset-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.25s ease;
+
+    --color-highlight-on-dark-alt: #7dd3fc;
+
+    --color-chrome-nav-bg: #0f1729;
+    --color-chrome-nav-bg-mid: #121f35;
+    --color-chrome-nav-border: rgba(148, 186, 220, 0.14);
+    --color-chrome-nav-text: #e8eef5;
+    --color-chrome-nav-muted: #8fa8bf;
+
+    --placeholder-photo: url('../../images/yurr.png');
+}

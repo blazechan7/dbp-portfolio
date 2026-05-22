@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../images/wolfYippee.png" type="image/png">
+    <meta name="description" content="Puteri Basri - Fontys ICT student: design, branding, UX, frontend development; creative digital work. Portfolio.">
+    <title>Puteri Basri - Portfolio</title>
+    <link rel="stylesheet" href="../../css/styles.css?v=40">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body class="page-home">
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="index.html" class="nav__logo-link"><span class="nav__logo-kicker">Design by</span> Puteri</a>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link nav__link--active">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../about/index.html" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../work/index.html" class="nav__link">Work</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../playground/index.html" class="nav__link">Playground</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../contact/index.html" class="nav__link">Contact</a>
+                </li>
+            </ul>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+
+    <main class="main main--home" id="main">
+        <section class="hero hero--cover" id="hero" aria-labelledby="hero-title">
+            <div class="magazine-cover">
+                <div class="magazine-cover__noise" aria-hidden="true"></div>
+                <div class="magazine-cover__glow magazine-cover__glow--1" aria-hidden="true"></div>
+                <div class="magazine-cover__glow magazine-cover__glow--2" aria-hidden="true"></div>
+
+                <div class="magazine-cover__inner container">
+                    <header class="magazine-cover__masthead" data-animate="fade-up">
+                        <span class="magazine-cover__series">Fontys Open Learning · 2026</span>
+                        <span class="magazine-cover__vol">Vol. 01</span>
+                    </header>
+
+                    <div class="magazine-cover__body">
+                        <div class="magazine-cover__copy">
+                            <h1 class="magazine-cover__title" id="hero-title" data-animate="fade-up" data-delay="0.06">
+                                <span class="magazine-cover__title-line magazine-cover__title-line--mega">Puteri Basri</span>
+                                <span class="magazine-cover__title-line magazine-cover__title-line--sub">Portfolio</span>
+                            </h1>
+                            <p class="magazine-cover__deck" data-animate="fade-up" data-delay="0.1">
+                                Fontys ICT student focused on <span class="hl hl--sun">Design, Branding, UX, and Frontend Development</span>, with a strong interest in <span class="hl hl--rose">creative digital work</span>.
+                            </p>
+                            <div class="hero__actions magazine-cover__actions" data-animate="fade-up" data-delay="0.14">
+                                <a href="../work/index.html" class="hero__cta">
+                                    View work
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                                <a href="../about/index.html" class="hero__cta hero__cta--secondary">About</a>
+                            </div>
+                            <div class="hero__status-wrap" data-animate="fade-up" data-delay="0.2">
+                                <p class="hero-availability hero-availability--open" id="status-notification" role="status" aria-live="polite">
+                                    <span class="hero-availability__indicator" aria-hidden="true">
+                                        <span class="hero-availability__dot"></span>
+                                    </span>
+                                    <span class="hero-availability__text" id="status-text">Open for internship - Creative IT</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <aside class="hero__aside magazine-cover__visual" data-animate="fade-up" data-delay="0.12">
+                            <span class="magazine-cover__stamp" aria-hidden="true">Cover story</span>
+                            <div class="hero__photo magazine-cover__media">
+                                <video
+                                    class="magazine-cover__video"
+                                    autoplay
+                                    muted
+                                    loop
+                                    playsinline
+                                    poster="../../images/mee.jpeg"
+                                    aria-label="Puteri Basri — portfolio cover video"
+                                >
+                                    <source src="../../videos/home-cover.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <nav class="magazine-cover__rail" aria-label="Explore the site" data-animate="fade-up" data-delay="0.22">
+                        <a href="../work/index.html">Work</a>
+                        <span class="magazine-cover__rail-dot" aria-hidden="true"></span>
+                        <a href="../playground/index.html">Playground</a>
+                        <span class="magazine-cover__rail-dot" aria-hidden="true"></span>
+                        <a href="../contact/index.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-preview" aria-labelledby="preview-heading">
+            <div class="container">
+                <header class="home-preview__header">
+                    <div>
+                        <p class="home-preview__overline" data-animate="fade-up">Selected work</p>
+                        <h2 class="home-preview__title" id="preview-heading" data-animate="fade-up" data-delay="0.04">Projects</h2>
+                    </div>
+                    <a href="../work/index.html" class="home-preview__link" data-animate="fade-up" data-delay="0.08">
+                        All projects
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </header>
+                <p class="home-preview__interlude" data-animate="fade-up" data-delay="0.05">
+                    <span class="home-preview__interlude-label">How I work</span>
+                    I work <span class="hl hl--mint">iteratively</span>, value <span class="hl hl--lavender">feedback</span> to improve my designs, and <span class="hl hl--sand">stay engaged</span> whether I’m collaborating with a team or working on my own.
+                </p>
+                <div class="home-preview__grid work__grid home-preview__grid--rhythm">
+                    
+                    
+                    
+<article class="project-card project-card--home-lead" data-animate="fade-up" data-delay="0.1">
+    <a class="project-card__image-wrapper" href="https://noxverse.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <div class="project-card__image project-card__image--noxverse" role="img" aria-label="NOX:VERSE — cosmic design studio portfolio"></div>
+    </a>
+    <div class="project-card__content">
+        <span class="project-card__category">Branding · Web · UI/UX · Motion</span>
+        <h3 class="project-card__title">NOX:VERSE</h3>
+        <p class="project-card__description">
+            Cosmic design studio portfolio combining brand identity, immersive web UI, and motion-led storytelling. An interactive universe-themed site with scroll-driven visuals, orbital micro-interactions, and showcased semester work across branding, UX, and development.
+        </p>
+        <a class="project-card__link" href="https://noxverse.netlify.app/" target="_blank" rel="noopener noreferrer">View live site →</a>
+    </div>
+</article>
+
+                    
+                    
+                    
+                    
+<article class="project-card" data-animate="fade-up" data-delay="0.2">
+    <a class="project-card__image-wrapper" href="https://projectvalentine25.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <div class="project-card__image project-card__image--valentine" role="img" aria-label="Valentine — playful web experiment"></div>
+    </a>
+    <div class="project-card__content">
+        <span class="project-card__category">Web · Sound · Interaction</span>
+        <h3 class="project-card__title">Valentine</h3>
+        <p class="project-card__description">
+            A small Valentine’s-themed web project made for fun, focused on experimenting with interaction, sound, visuals, and playful user prompts through an interactive web experience.
+        </p>
+        <a class="project-card__link" href="https://projectvalentine25.netlify.app/" target="_blank" rel="noopener noreferrer">View live site →</a>
+    </div>
+</article>
+
+                    
+                    
+                    
+                    
+<article class="project-card" data-animate="fade-up" data-delay="0.3">
+    <a class="project-card__image-wrapper" href="https://agathacoveninfo.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <div class="project-card__image project-card__image--agatha" role="img" aria-label="Agatha All Along: Coven — interactive fan site"></div>
+    </a>
+    <div class="project-card__content">
+        <span class="project-card__category">Web · Music · Interaction</span>
+        <h3 class="project-card__title">Agatha All Along: Coven</h3>
+        <p class="project-card__description">
+            A fun interactive fan site about the Agatha All Along series, with background music, playful interaction effects, and character pages for the coven. Built to explore mood, motion, and storytelling through a themed web experience.
+        </p>
+        <a class="project-card__link" href="https://agathacoveninfo.netlify.app/" target="_blank" rel="noopener noreferrer">View live site →</a>
+    </div>
+</article>
+
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="home-cta-row" aria-labelledby="home-cta-heading">
+            <div class="magazine-cover magazine-cover--band">
+                <div class="magazine-cover__noise" aria-hidden="true"></div>
+                <div class="magazine-cover__glow magazine-cover__glow--1" aria-hidden="true"></div>
+                <div class="magazine-cover__glow magazine-cover__glow--2" aria-hidden="true"></div>
+                <div class="magazine-cover__inner magazine-cover__inner--band">
+                    <div class="container">
+                        <div class="home-cta-row__split">
+                            <p class="home-cta-row__pull" data-animate="fade-up">Beyond the cover</p>
+                            <div class="home-cta-row__inner">
+                                <p class="home-cta-row__kicker" id="home-cta-heading" data-animate="fade-up">Also explore</p>
+                                <p class="home-cta-row__text" data-animate="fade-up" data-delay="0.05">
+                                    Playground is where I share <span class="hl hl--rose">hobbies and interests</span>, <span class="hl hl--sun">games, streams, and side projects</span> for fun, separate from my <span class="hl hl--mint">main work</span>.
+                                </p>
+                                <div class="home-cta-row__links" data-animate="fade-up" data-delay="0.1">
+                                    <a href="../playground/index.html">Playground</a>
+                                    <a href="../contact/index.html">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav" aria-label="Footer">
+                <a href="../about/index.html">About</a>
+                <a href="../work/index.html">Work</a>
+                <a href="../playground/index.html">Playground</a>
+                <a href="../contact/index.html">Contact</a>
+                <a href="https://www.linkedin.com/in/pdbasri/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+            </nav>
+            <p class="footer__text">&copy; 2026 <span class="footer__brand-kicker">Design by</span> Puteri. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../../js/script.js"></script>
+
+
+</body>
+</html>

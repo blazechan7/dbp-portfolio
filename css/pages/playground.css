@@ -1,0 +1,535 @@
+/* playground.css - portfolio partial */
+/* ========== Playground ========== */
+body.page-playground .page-hero__lead {
+    max-width: 48ch;
+}
+.playground-sections {
+    padding: clamp(2.25rem, 5vw, 3.5rem) 0 var(--spacing-lg);
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.playground-section {
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.playground-section--games {
+    padding-bottom: var(--spacing-xl);
+}
+
+.playground-section--out {
+    padding-bottom: var(--spacing-xl);
+}
+
+.playground-section--compact {
+    padding: var(--spacing-md) 0;
+}
+
+.playground-section--last {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.playground-section__index {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+}
+
+.playground-section__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 1.25rem + 1.5vw, 2rem);
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0 0 var(--spacing-sm);
+    letter-spacing: -0.02em;
+    max-width: 48ch;
+}
+
+.playground-section__lead {
+    margin: 0 0 var(--spacing-md);
+    max-width: 48ch;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+}
+
+/* Games panel: community banner (left) + games (right) */
+.playground-games-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    gap: clamp(1rem, 2.5vw, 1.75rem);
+    align-items: stretch;
+    padding: clamp(1rem, 2.5vw, 1.35rem);
+    border-radius: calc(var(--radius-card) + 4px);
+    border: 1px solid rgba(15, 107, 171, 0.18);
+    background: linear-gradient(165deg, var(--surface) 0%, #f4f9fc 55%, #eaf3fa 100%);
+    box-shadow: var(--shadow-sm);
+}
+
+.playground-games-panel__community {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0.1rem 0;
+}
+
+.playground-community-banner {
+    flex: 0 0 auto;
+    margin: 0 0 0.75rem;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: calc(var(--radius-card) + 2px);
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    background: linear-gradient(165deg, #1e1b2e 0%, #4a3f6b 45%, #0f6bab 100%);
+    box-shadow: var(--shadow-sm);
+}
+
+.playground-community-banner__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 42%;
+}
+
+.playground-community-banner--missing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: clamp(11rem, 32vw, 20rem);
+}
+
+.playground-community-banner--missing::after {
+    content: 'Add akumaspirits.jpg to images/playground/games/';
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.playground-community-caption {
+    margin: 0 0 0.65rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+}
+
+.playground-games-tags--community {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.playground-games-panel__games {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0.1rem 0 0.1rem clamp(0.85rem, 2vw, 1.25rem);
+    border-left: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.playground-games-desk {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.playground-games-desk__dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.14);
+}
+
+.playground-games-desk__dot:nth-child(1) {
+    background: rgba(255, 95, 87, 0.75);
+}
+
+.playground-games-desk__dot:nth-child(2) {
+    background: rgba(255, 189, 46, 0.85);
+}
+
+.playground-games-desk__dot:nth-child(3) {
+    background: rgba(40, 200, 64, 0.8);
+}
+
+.playground-games-desk__label {
+    margin-left: auto;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.playground-games-pull {
+    margin: 0 0 0.85rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: rgba(15, 23, 42, 0.88);
+}
+
+.playground-games-dock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.85rem 1.1rem;
+    margin: 0 0 0.85rem;
+    padding: 0;
+    list-style: none;
+}
+
+.playground-game-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(4.5rem, 14vw, 5.75rem);
+    margin: 0;
+    text-align: center;
+}
+
+.playground-game-icon__img {
+    display: block;
+    width: clamp(4rem, 12vw, 4.75rem);
+    height: clamp(4rem, 12vw, 4.75rem);
+    object-fit: contain;
+}
+
+.playground-game-icon__tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 22%;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.2) inset,
+        0 2px 8px rgba(15, 23, 42, 0.1);
+    overflow: hidden;
+}
+
+.playground-game-icon__tile--valorant {
+    background: linear-gradient(160deg, #2b3042 0%, #ff4655 100%);
+}
+
+.playground-game-icon__tile--lol {
+    background: linear-gradient(160deg, #0a1428 0%, #c89b3c 100%);
+}
+
+.playground-game-icon__tile--osu {
+    background: linear-gradient(160deg, #3d2068 0%, #ff66aa 100%);
+}
+
+.playground-game-icon__tile--stardew {
+    background: linear-gradient(160deg, #3d6b35 0%, #9ccc65 100%);
+}
+
+.playground-game-icon__glyph {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    user-select: none;
+}
+
+.playground-game-icon__name {
+    margin-top: 0.45rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text);
+    max-width: 5.5rem;
+}
+
+.playground-games-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.45rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.playground-games-tags li {
+    margin: 0;
+}
+
+.playground-games-tag {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--text);
+    border: 1px solid rgba(15, 107, 171, 0.3);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.playground-games-list {
+    margin: 0 0 0.25rem;
+    padding: 0;
+    list-style: none;
+}
+
+.playground-games-list__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin: 0 0 0.65rem;
+    padding: 0.5rem 0.55rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.playground-games-list__item:last-child {
+    margin-bottom: 0;
+}
+
+.playground-games-list__tile {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-top: 0.05rem;
+}
+
+.playground-games-list__tile .playground-game-icon__glyph {
+    font-size: 0.75rem;
+}
+
+.playground-games-list__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    min-width: 0;
+}
+
+.playground-games-list__name {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.playground-games-list__meta {
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+}
+
+/* Out & About: trip hero + city / food chapters */
+.playground-out-panel {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2.5vw, 1.35rem);
+    padding: clamp(1rem, 2.5vw, 1.35rem);
+    border-radius: calc(var(--radius-card) + 4px);
+    border: 1px solid rgba(15, 107, 171, 0.18);
+    background: linear-gradient(165deg, var(--surface) 0%, #faf8f5 48%, #f2ebe3 100%);
+    box-shadow: var(--shadow-sm);
+}
+
+.playground-out-hero {
+    margin: 0;
+}
+
+.playground-out-hero__frame {
+    aspect-ratio: 21 / 9;
+    width: 100%;
+    border-radius: calc(var(--radius-card) + 2px);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-sm);
+}
+
+.playground-out-hero__frame--asia {
+    background: linear-gradient(125deg, #1a3a4a 0%, #c45c3e 42%, #e8a84a 72%, #f4d4a0 100%);
+}
+
+.playground-out-hero__caption {
+    display: block;
+    margin: 0.65rem 0 0;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+}
+
+.playground-out-hero__label {
+    display: block;
+    margin: 0 0 0.2rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.playground-out-hero__note {
+    display: block;
+    margin: 0;
+}
+
+.playground-out-hero__frame:has(.playground-out-hero__img) {
+    overflow: hidden;
+}
+
+.playground-out-hero__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.playground-out-split {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.playground-out-chapter {
+    min-width: 0;
+}
+
+.playground-out-chapter__title {
+    margin: 0 0 0.65rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: rgba(15, 23, 42, 0.88);
+}
+
+.playground-out-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.playground-out-gallery__item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    min-width: 0;
+}
+
+.playground-out-thumb {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.playground-out-thumb--city-a {
+    background: linear-gradient(155deg, #1e293b 0%, #475569 55%, #94a3b8 100%);
+}
+
+.playground-out-thumb--city-b {
+    background: linear-gradient(155deg, #0f172a 0%, #334155 50%, #64748b 100%);
+}
+
+.playground-out-thumb--food-a {
+    background: linear-gradient(155deg, #7c2d12 0%, #c2410c 50%, #fdba74 100%);
+}
+
+.playground-out-thumb--food-b {
+    background: linear-gradient(155deg, #78350f 0%, #d97706 55%, #fde68a 100%);
+}
+
+.playground-out-thumb:has(.playground-out-thumb__img) {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.playground-out-thumb__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.playground-out-thumb__caption {
+    margin: 0.4rem 0 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-muted);
+}
+
+.playground-out-tags {
+    margin: 0.15rem 0 0;
+}
+
+@media (max-width: 720px) {
+    .playground-games-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .playground-games-panel__community {
+        order: 0;
+    }
+
+    .playground-games-panel__games {
+        order: 1;
+        padding-left: 0;
+        padding-top: 0.85rem;
+        border-left: none;
+        border-top: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    .playground-community-banner {
+        aspect-ratio: 16 / 10;
+    }
+
+    .playground-games-dock {
+        gap: 0.75rem 0.95rem;
+    }
+
+    .playground-out-hero__frame {
+        aspect-ratio: 16 / 10;
+    }
+
+    .playground-out-split {
+        grid-template-columns: 1fr;
+    }
+}
+
+body.page-playground .playground-current__list {
+    max-width: var(--prose-max);
+    margin: 0 0 var(--spacing-lg);
+    padding-left: 1.25rem;
+    list-style: disc;
+    color: var(--text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.78;
+}
+
+body.page-playground .playground-current__list li {
+    margin-bottom: var(--spacing-sm);
+}
+
+body.page-playground .playground-current__list li:last-child {
+    margin-bottom: 0;
+}
